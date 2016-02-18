@@ -8,16 +8,58 @@ angular.module('CactusApp.tasks', ['ngRoute'])
 }])
 
 
-.controller('Tasks', function($scope){
+.controller('Tasks', function($scope) {
 
-  $scope.taskList = [
-     {"name": "vacuum"},
-     {"name": "do the dishes"},
-     {"name": "clean the bathroom"},
-     {"name": "do the laundry"},
-     {"name": "take out the garbage"}
+  $scope.taskList = [{
+      "taskName": "vacuum",
+      "done": false
+    }, {
+      "taskName": "do the dishes",
+      "done": false
+    }, {
+      "taskName": "clean the bathroom",
+      "done": false
+    }, {
+      "taskName": "do the laundry",
+      "done": false
+    }, {
+      "taskName": "take out the garbage",
+      "done": false
+    }
 
-   ];
- console.log($scope.taskList);
+  ];
+  $scope.users = [
+    {
+        "userName": "Admir",
+        "tasks": [
+          {
+          "taskName": "vacuum",
+          "date": ["2016-01-01", "2016-02-01"]
+          },
+          {
+          "taskName": "clean",
+          "date": ["2016-01-01", "2016-02-01"]
+          },
+          {
+          "taskName": "garbage",
+          "date": ["2016-01-01", "2016-02-01"]
+          },
+      ]
+  }
+];
+  //console.log($scope.users[0].tasks);
+  console.log($scope.taskList[0]);
+
 
 });
+
+
+
+
+
+/*
+Lista tasks förinställda - placeholder
+Tasks ska tas från Firebase
+Checkbox för gjorda tasks
+
+*/

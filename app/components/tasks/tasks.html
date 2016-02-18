@@ -1,14 +1,33 @@
-
-  <div ng-controller="Tasks" class="task-list">
+<div class="columns">
+  <div ng-controller="Tasks" class="column is-half is-offset-quarter">
     <h1>Tasks</h1>
 
-          <input ng-model="task.completed" type="checkbox">
-          <label ng-hide="editing" class="editing-label" ng-click="tasks()">{{task.name}}</label>
-          <input ng-blur="editing = false;" ng-show="editing" ng-model="task.name" class="editing-label" type="text">
+    <ul>
+        <!--Task 1----->
+      <li><input ng-model="taskList[0].done" type="checkbox">
+        <span>{{taskList[0].taskName}}</span></li>
 
-      <div class="actions">
-        <a href="" ng-click="editing = !editing">Edit</a>
-        <a href="" ng-click="tasks()">Save</a>
-        <a href="" class="delete">Delete</a>
-      </div>
+        <!--Task 2----->
+      <li><input ng-model="taskList[1].done" type="checkbox">
+          <span>{{taskList[1].taskName}}</span></li>
+
+        <!--Task 3----->
+      <li><input ng-model="taskList[2].done" type="checkbox">
+        <label ng-click="tasks()">{{taskList.taskName}}</label>
+        <span>{{taskList[2].taskName}}</span></li>
+
+        <!--Task 4----->
+      <li><input ng-model="taskList[3].done" type="checkbox">
+        <label ng-click="tasks()">{{taskList.taskName}}</label>
+        <span>{{taskList[3].taskName}}</span></li>
+
+        <!--Task 5----->
+      <li><input ng-model="taskList[4].done" type="checkbox">
+        <label ng-click="tasks()">{{taskList.taskName}}</label>
+        <span>{{taskList[4].taskName}}</span></li>
+
+     </ul>
+
+
+ </div>
  </div>
