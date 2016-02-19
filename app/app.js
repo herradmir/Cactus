@@ -6,7 +6,7 @@ angular.module('CactusApp', [
   'CactusApp.login',
   'CactusApp.overview',
   'CactusApp.createGroup',
-  'CactusApp.createUser'
+  'CactusApp.createUser',
   'CactusApp.tasks'
 ]).
 config(['$routeProvider', function($routeProvider) {
