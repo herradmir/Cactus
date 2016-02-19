@@ -1,0 +1,33 @@
+<div class="columns">
+  <div ng-controller="Tasks" class="column is-half is-offset-quarter">
+    <h1>Tasks</h1>
+
+    <ul>
+        <!--Task 1----->
+      <li><input ng-model="taskList[0].done" type="checkbox">
+        <span>{{taskList[0].taskName}}</span></li>
+
+        <!--Task 2----->
+      <li><input ng-model="taskList[1].done" type="checkbox">
+          <span>{{taskList[1].taskName}}</span></li>
+
+        <!--Task 3----->
+      <li><input ng-model="taskList[2].done" type="checkbox">
+        <label ng-click="tasks()">{{taskList.taskName}}</label>
+        <span>{{taskList[2].taskName}}</span></li>
+
+        <!--Task 4----->
+      <li><input ng-model="taskList[3].done" type="checkbox">
+        <label ng-click="tasks()">{{taskList.taskName}}</label>
+        <span>{{taskList[3].taskName}}</span></li>
+
+        <!--Task 5----->
+      <li><input ng-model="taskList[4].done" type="checkbox">
+        <label ng-click="tasks()">{{taskList.taskName}}</label>
+        <span>{{taskList[4].taskName}}</span></li>
+
+     </ul>
+
+
+ </div>
+ </div>

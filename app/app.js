@@ -7,6 +7,7 @@ angular.module('CactusApp', [
   'CactusApp.overview',
   'CactusApp.createGroup',
   'CactusApp.createUser'
+  'CactusApp.tasks'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/login'});
