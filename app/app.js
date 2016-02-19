@@ -4,8 +4,9 @@
 angular.module('CactusApp', [
   'ngRoute',
   'CactusApp.login',
-  'CactusApp.overview'
-
+  'CactusApp.overview',
+  'CactusApp.createGroup',
+  'CactusApp.createUser'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/login'});
