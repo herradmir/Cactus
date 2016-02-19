@@ -1,1 +1,4 @@
 # Cactus
+
+## Stack
+Angular & AngularFire
