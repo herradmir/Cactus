@@ -3,31 +3,13 @@
     <h1>Tasks</h1>
 
     <ul>
-        <!--Task 1----->
-      <li><input ng-model="taskList[0].done" type="checkbox">
-        <span>{{taskList[0].taskName}}</span></li>
 
-        <!--Task 2----->
-      <li><input ng-model="taskList[1].done" type="checkbox">
-          <span>{{taskList[1].taskName}}</span></li>
+      <li ng-repeat="task in taskList">
+        <input type="checkbox"  ng-model="isChecked">
+        <span>{{task.taskName}}</span>
+      </li>
 
-        <!--Task 3----->
-      <li><input ng-model="taskList[2].done" type="checkbox">
-        <label ng-click="tasks()">{{taskList.taskName}}</label>
-        <span>{{taskList[2].taskName}}</span></li>
+    </ul>
 
-        <!--Task 4----->
-      <li><input ng-model="taskList[3].done" type="checkbox">
-        <label ng-click="tasks()">{{taskList.taskName}}</label>
-        <span>{{taskList[3].taskName}}</span></li>
-
-        <!--Task 5----->
-      <li><input ng-model="taskList[4].done" type="checkbox">
-        <label ng-click="tasks()">{{taskList.taskName}}</label>
-        <span>{{taskList[4].taskName}}</span></li>
-
-     </ul>
-
-
- </div>
- </div>
+  </div>
+</div>

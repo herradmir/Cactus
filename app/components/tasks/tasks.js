@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('CactusApp.tasks', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -11,46 +13,63 @@ angular.module('CactusApp.tasks', ['ngRoute'])
 .controller('Tasks', function($scope) {
 
   $scope.taskList = [{
+      "id": 1,
       "taskName": "vacuum",
       "done": false
     }, {
+      "id": 2,
       "taskName": "do the dishes",
       "done": false
     }, {
+      "id": 3,
       "taskName": "clean the bathroom",
       "done": false
     }, {
+      "id": 4,
       "taskName": "do the laundry",
       "done": false
     }, {
+      "id": 5,
       "taskName": "take out the garbage",
       "done": false
     }
 
   ];
-  $scope.users = [
-    {
-        "userName": "Admir",
-        "tasks": [
-          {
-          "taskName": "vacuum",
-          "date": ["2016-01-01", "2016-02-01"]
-          },
-          {
-          "taskName": "clean",
-          "date": ["2016-01-01", "2016-02-01"]
-          },
-          {
-          "taskName": "garbage",
-          "date": ["2016-01-01", "2016-02-01"]
-          },
-      ]
-  }
-];
-  //console.log($scope.users[0].tasks);
-  console.log($scope.taskList[0]);
 
 
+
+  $scope.users = [{
+    "userName": "Admir",
+    "tasks": [{}]
+  }, {
+    "userName": "Julia",
+    "tasks": []
+  }];
+
+
+
+
+
+/*
+  $scope.ifTrueAdd = function(clickedTask) {
+    var id = clickedTask.id;
+    console.log($scope.users[0].tasks);
+    console.log(id);
+    var loggedInUser = $scope.users[0];
+    // console.log(loggedInUser.tasks);
+    loggedInUser.tasks.forEach(function(userTask) {
+      if (clickedTask.done && id !== userTask.id) {
+        // console.log('not in list');
+        loggedInUser.tasks.push(clickedTask);
+        console.log('pushed');
+      }
+      else{
+        console.log('is in list');
+      }
+    })
+    console.log(loggedInUser.tasks);
+  };
+  */
 });
 
 
