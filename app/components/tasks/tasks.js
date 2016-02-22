@@ -32,6 +32,10 @@ angular.module('CactusApp.tasks', ['ngRoute'])
       "id": 5,
       "taskName": "take out the garbage",
       "done": false
+    }, {
+      "id": 6,
+      "taskName": "cook dinner",
+      "done": false
     }
 
   ];

@@ -1,15 +1,19 @@
-<div class="columns">
-  <div ng-controller="Tasks" class="column is-half is-offset-quarter">
-    <h1>Tasks</h1>
+<div class="container" ng-controller="Tasks">
 
-    <ul>
+  <div class="row clearfix">
+    <h1 class="col-xs-12">Tasks</h1>
 
-      <li ng-repeat="task in taskList">
-        <input type="checkbox"  ng-model="isChecked">
-        <span>{{task.taskName}}</span>
-      </li>
 
-    </ul>
+    <div class="row clearfix">
 
-  </div>
+      <ul class="list-inline">
+        <li class="col-xs-6 list-padding" ng-repeat="task in taskList">
+          <input type="checkbox"  ng-model="isChecked">
+          <span>{{task.taskName}}</span>
+        </li>
+      </ul>
+
+    </div>
+
+
 </div>
