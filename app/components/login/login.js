@@ -3,36 +3,41 @@
 angular.module('CactusApp.login', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/login', {
-		templateUrl: 'components/login/login.html',
-		controller: 'Login'
-	});
+  $routeProvider.when('/login', {
+    templateUrl: 'components/login/login.html',
+    controller: 'LoginController'
+  });
 }])
 
-.controller('Login', function($scope, $location, $rootScope) {
-	$scope.userData = {
-		name: '',
-		password: ''
-	};
-	$scope.firebaseUser = {
-		name: 'Admir',
-		password: 'password'
-	};
+.controller('LoginController', function($scope, $location, $rootScope, $firebaseAuth, $firebaseObject, Auth) {
 
-	$scope.loginForm = function() {
-			var name = $scope.userData.name;
-			var password = $scope.userData.password;
-			if ($scope.userData.name == $scope.firebaseUser.name && $scope.userData.password == $scope.firebaseUser.password) { // test
-				$rootScope.loggedUser = $scope.username;
-				$location.path("/overview");
-			} else {
-				$scope.loginError = "Invalid user/pass.";
-        console.log($scope.loginError);
-			}
-		}
-	// TODO get firebase service
-	// TODO get user input
-	// TODO check user input with firebase data
-	// if true move to userpage with userid
-	// false show wrong password
-});
+  $scope.logout = function() {
+    Auth.$unauth();
+    console.log('logging out');
+  };
+
+  $scope.loginForm = function() {
+      var userName = $scope.userData.name;
+      var password = $scope.userData.password;
+
+      Auth.$authWithPassword({
+        email: userName,
+        password: password
+      }, function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+        }
+      });
+
+      Auth.$onAuth(function(authData) {
+        if (authData) {
+          console.log("Authenticated with uid:", authData.uid);
+          $location.path('/overview');
+        } else {
+          console.log("Client unauthenticated.")
+        }
+      });
+    } // loginForm
+}); // module
