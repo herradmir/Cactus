@@ -9,80 +9,121 @@ angular.module('CactusApp.tasks', ['ngRoute'])
   });
 }])
 
-
 .controller('Tasks', function($scope) {
+  // group list
 
   $scope.taskList = [{
-      "id": 1,
-      "taskName": "vacuum",
-      "done": false
-    }, {
-      "id": 2,
-      "taskName": "do the dishes",
-      "done": false
-    }, {
-      "id": 3,
-      "taskName": "clean the bathroom",
-      "done": false
-    }, {
-      "id": 4,
-      "taskName": "do the laundry",
-      "done": false
-    }, {
-      "id": 5,
-      "taskName": "take out the garbage",
-      "done": false
-    }, {
-      "id": 6,
-      "taskName": "cook dinner",
-      "done": false
-    }
-
-  ];
-
-
-
-  $scope.users = [{
-    "userName": "Admir",
-    "tasks": [{}]
+    "id": 1,
+    "taskName": "vacuum",
+    "done": false,
+    "doneBy": [{
+      "user": "Julia",
+      "date": 1456235821828
+    }],
   }, {
-    "userName": "Julia",
-    "tasks": []
+    "id": 2,
+    "taskName": "do the dishes",
+    "done": false,
+    "doneBy": [{
+      "user": "Julia",
+      "date": 1456235821828
+    }]
+  }, {
+    "id": 3,
+    "taskName": "clean the bathroom",
+    "done": false,
+    "doneBy": [{
+      "user": "Julia",
+      "date": 1456235821828
+    }],
+  }, {
+    "id": 4,
+    "taskName": "do the laundry",
+    "done": true,
+    "doneBy": [{
+      "user": "Julia",
+      "date": 1456235821828
+    }],
+  }, {
+    "id": 5,
+    "taskName": "take out the garbage",
+    "done": false,
+    "doneBy": [{
+      "user": "",
+      "date": 1212312
+    }],
+  }, {
+    "id": 6,
+    "taskName": "cook dinner",
+    "done": false,
+    "doneBy": [{
+      "user": "",
+      "date": 12313
+    }],
   }];
 
+  //$scope.users = [{
+  //  "userName": "Admir",
+  ////  "tasks": []
+  //}, {
+  //  "userName": "Julia",
+  //  "tasks": []
+  //}];
 
 
-
-
-/*
-  $scope.ifTrueAdd = function(clickedTask) {
-    var id = clickedTask.id;
-    console.log($scope.users[0].tasks);
-    console.log(id);
-    var loggedInUser = $scope.users[0];
-    // console.log(loggedInUser.tasks);
-    loggedInUser.tasks.forEach(function(userTask) {
-      if (clickedTask.done && id !== userTask.id) {
-        // console.log('not in list');
-        loggedInUser.tasks.push(clickedTask);
-        console.log('pushed');
-      }
-      else{
-        console.log('is in list');
-      }
-    })
-    console.log(loggedInUser.tasks);
+  // fake firebase användare ==> set user = 'julia';
+  //user = logged in firebase user.profile
+  $scope.user = {
+    "userName": "Admir",
+    "tasks": []
   };
-  */
+
+  // sync when checkbox changes true or false
+  $scope.sync = function(bool, task) {
+    for (var i = 0; i < $scope.taskList.length; i++) {
+      if ($scope.taskList[i].id == task.id) {
+        $scope.taskList[i].done = bool;
+        console.log($scope.taskList[i]);
+      }
+    }
+  }
+
+
+
+  // när man checkar i checkbox
+  // add user to taskList doneBy taskList.doneBy = user
+  // user.tasks.push(task)
+
+  // för att visa gjorda task i profil
+  // loopa taskList
+  // hitta doneBy == user
+  // user.tasks.push(task)
+  $scope.maybeAdd = function(bool, task) {
+    if (bool) {
+      for (var j = 0; j < $scope.taskList.length; j++) {
+        if ($scope.taskList[j].id == task.id) {
+          $scope.taskList[j].doneBy.push({
+            "user": $scope.user,
+            "date": new Date().getTime()
+          });
+          $scope.user.tasks.push(task);
+        }
+      }
+
+
+    }
+
+  };
+
+
+  // group taskList
+  // TODO sync check/not checked from group list
+  // sync list items to group list
+
+
 });
 
 
-
-
-
-/*
-Lista tasks förinställda - placeholder
-Tasks ska tas från Firebase
-Checkbox för gjorda tasks
-
-*/
+// user tasks
+// TODO if checked then add to user tasks
+// TODO if not checked then remove from user tasks

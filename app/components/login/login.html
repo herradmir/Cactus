@@ -1,6 +1,7 @@
-<form class="" method="post" ng-controller="Login" ng-submit="loginForm()">
-  <input type="text" name="name" ng-model="userData.name" value="" class="full-width" placeholder="Username">
-  <input type="text" name="name" ng-model="userData.password" value="" class="full-width" placeholder="Password">
+<form class="" method="post" ng-controller="LoginController" ng-submit="loginForm()">
+  <input type="text" name="name" ng-model="userData.name" value="" class="full-width" placeholder="Username" required>
+  <input type="text" name="name" ng-model="userData.password" value="" class="full-width" placeholder="Password" required>
   <button type="submit" class="full-width" name="button">Login</button>
-  <button type="button" class="full-width" name="button">Register</button>
+  <button type="button" class="full-width" ng name="button">Register</button>
 </form>
+<button type="button" class="full-width" ng-click="logout()" name="button">Logout</button>
