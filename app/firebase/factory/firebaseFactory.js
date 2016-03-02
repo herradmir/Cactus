@@ -1,3 +1,5 @@
+'user strict'
+
 angular.module('CactusApp.Firebasefactories', ['firebase'])
 
 .factory('ref', ['FirebaseUrl', function(FirebaseUrl) {
@@ -7,7 +9,7 @@ angular.module('CactusApp.Firebasefactories', ['firebase'])
 
 .factory('userRef', ['$firebaseArray', 'FirebaseUrl', function($firebaseArray, FirebaseUrl) {
   var ref = new Firebase(FirebaseUrl + '/Users');
-  return $firebaseArray(ref);
+  return (ref);
 }])
 
 .factory('groupRef', ['$firebaseArray', 'FirebaseUrl', function($firebaseArray, FirebaseUrl) {
