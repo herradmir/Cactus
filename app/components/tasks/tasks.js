@@ -17,8 +17,8 @@ angular.module('CactusApp.tasks', ['ngRoute'])
     "taskName": "vacuum",
     "done": false,
     "doneBy": [{
-      "user": "Julia",
-      "date": 1456235821828
+      "userName": "Admir",
+      "tasks": []
     }],
   }, {
     "id": 2,
@@ -62,15 +62,6 @@ angular.module('CactusApp.tasks', ['ngRoute'])
     }],
   }];
 
-  //$scope.users = [{
-  //  "userName": "Admir",
-  ////  "tasks": []
-  //}, {
-  //  "userName": "Julia",
-  //  "tasks": []
-  //}];
-
-
   // fake firebase användare ==> set user = 'julia';
   //user = logged in firebase user.profile
   $scope.user = {
@@ -103,7 +94,8 @@ angular.module('CactusApp.tasks', ['ngRoute'])
       for (var j = 0; j < $scope.taskList.length; j++) {
         if ($scope.taskList[j].id == task.id) {
           $scope.taskList[j].doneBy.push({
-            "user": $scope.user,
+            "user": $scope.user.userName,
+            // "userTasks": $scope.user,
             "date": new Date().getTime()
           });
           $scope.user.tasks.push(task);
