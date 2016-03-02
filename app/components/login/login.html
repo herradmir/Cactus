@@ -1,5 +1,5 @@
-
-<div class="wrapper">
+<div class="container">
+ <div class="wrapper">
 
   <div class="row">
     <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
@@ -9,14 +9,12 @@
     <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
   </div>
 
+  <div class="login-main">
+    <form class="form-control" method="post" ng-controller="LoginController" ng-submit="loginForm()">
 
-  <form class="form-group" method="post" ng-controller="LoginController" ng-submit="loginForm()">
 
-    <div class="row login-main">
       <div class="col-xs-4">
-
-        <input type="text" name="name" ng-model="userData.name" value="" class="center-block" placeholder="Username" required>
-
+          <input type="text" name="name" ng-model="userData.name" value="" class="center-block" placeholder="Username" required>
       </div>
 
       <input type="text" name="name" ng-model="userData.password" value="" class="center-block" placeholder="Password" required>
@@ -28,4 +26,5 @@
 
 <!--  <button type="button" class="btn btn-default" ng-click="logout()" name="button">Logout</button> -->
 
-</div>  <!--end wrapper -->
+ </div>  <!--end wrapper -->
+</div>
