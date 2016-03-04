@@ -14,7 +14,7 @@ angular.module('CactusApp.Firebasefactories', ['firebase'])
 
 .factory('groupRef', ['$firebaseArray', 'FirebaseUrl', function($firebaseArray, FirebaseUrl) {
   var ref = new Firebase(FirebaseUrl + '/Groups');
-  return $firebaseArray(ref);
+  return (ref);
 }])
 
 .factory('Auth', ['$firebaseAuth', 'FirebaseUrl', function($firebaseAuth, FirebaseUrl) {
