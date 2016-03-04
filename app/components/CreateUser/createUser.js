@@ -31,6 +31,7 @@ angular.module('CactusApp.createUser', ['ngRoute'])
         tasks: [''],
         group: ['']
       });
+      $location.path('/creategroup')
     }
 		else{
 			//trow error on password match
