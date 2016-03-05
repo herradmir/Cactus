@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: 'Montserrat-Light';
-  src:  url('app/fonts/Montserrat-Light.otf');
+  src:  url('fonts/Montserrat-Light.otf');
 }
 
 @font-face {
   font-family: 'Montserrat-Regular';
-  src:  url('app/fonts/Montserrat-Regular.otf');
+  src:  url('fonts/Montserrat-Regular.otf');
 }
 
 * {
