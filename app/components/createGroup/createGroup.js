@@ -19,7 +19,7 @@ angular.module('CactusApp.createGroup', ['ngRoute'])
             
             function addGroupToFirebase(groupname, loggedInUser) {
 
-                referenceToGroup.push({
+                referenceToGroup.$add({
                     groupID: 1234,
                     name: groupname,
                     groupmembers: [
