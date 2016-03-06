@@ -2,11 +2,9 @@
 
     <div class="row taskList">
         <h1 class="col-xs-12">Tasks</h1>
-
-        <h2>{{name}}</h2>
         <ul class="list-inline">
-            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in taskList">
-                <input type="checkbox" ng-model="bool" ng-change="sync(bool, task); maybeAdd(bool, task)" ng-checked="task.done">
+            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in data" ng-model="task.done">
+                <input type="checkbox" ng-model="task.done" ng-change="">
                 <span>{{task.taskName}}</span>
             </li>
         </ul>
@@ -17,7 +15,7 @@
 
 
 <!--<pre>
-        {{taskList | json}}
+        {{data | json}}
       </pre>-->
 <!--<pre>
         {{user | json}}
