@@ -13,11 +13,19 @@ angular.module('CactusApp.tasks', ['ngRoute'])
         var loggedIn = Auth.$getAuth();
         var referenceToGroup = new Firebase('https://cactus-app.firebaseio.com/Groups/' + loggedIn.uid)
         var groupList = $firebaseObject(referenceToGroup);
-
+        //var groupList = $firebaseArray(referenceToGroup);
+        
         groupList.$loaded().then(function () {
-            groupList.$bindTo($scope, "data")
-        })
-            .catch(function (error) {
-                console.log("Error:", error);
+            angular.forEach(groupList, function (item) {
+                $scope.data = item.taskList;
             });
+        }).catch(function (error) {
+            console.log("Error:", error);
+        });
+        
+        // three way binding
+        groupList.$bindTo($scope, "data").then(function () {
+        }).catch(function (error) {
+            console.log("Error:", error);
+        });
     });
