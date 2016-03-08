@@ -1,4 +1,42 @@
-<form class="" method="post" ng-controller="createGroup" ng-submit="createGroupForm()">
-  <input type="text" name="name" ng-model="userData.name" value="" class="full-width" placeholder="Group name">
-  <button type="submit" class="full-width" name="button">Create</button>
-</form>
+<div class="wrapper">
+
+  <!--HEADER----------------->
+  <header class="header-login">
+
+    <div class="row">
+      <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
+    </div
+
+    <div class="row">
+      <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
+    </div>
+
+  </header>
+  <!---------------->
+
+ <div class="createGroup-main">
+
+   <div class="row">
+     <div class="text-center create-text">
+     <span>Create a group to get started!</span>
+     </div>
+   </div>
+
+   <form class="" method="post" ng-controller="createGroup" ng-submit="createGroupForm()">
+
+     <div class="row">
+       <div class="form-group">
+        <label class="sr-only" for="exampleInputUsername1">Group name</label>
+         <input type="text" name="name" ng-model="userData.name" value="" class="input-style center-block" placeholder="Group name">
+       </div>
+     </div>
+
+    <div class="row">
+      <button type="submit" class="button-style center-block" name="button">Create group</button>
+    </div>
+  </form>
+
+
+  </div>
+
+</div>

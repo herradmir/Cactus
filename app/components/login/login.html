@@ -1,5 +1,7 @@
+<div class="wrapper">
 
- <div class="wrapper">
+<!--HEADER----------------->
+<header class="header-login">
 
   <div class="row">
     <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
@@ -9,38 +11,47 @@
     <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
   </div>
 
+</header>
+<!---------------->
 
-  <div class="login-main">
+
+<main class="main-login">
+  <!--FORM----------------->
 
     <form method="post" ng-controller="LoginController"  ng-submit="loginForm()">
+
 
     <div class="row">
       <div class="form-group">
       <label class="sr-only" for="exampleInputUsername1">Username</label>
-        <input type="text" name="name" ng-model="userData.name" class="input-style text-center center-block" value="" placeholder="Username"  required>
+        <input type="text" name="name" ng-model="userData.name" class="input-style input-style-login center-block" value="" placeholder="Username"  required>
+      </div>
       </div>
     </div>
 
     <div class="row">
       <div class="form-group">
    <label class="sr-only" for="exampleInputPassword1">Password</label>
-       <input type="text" name="name" ng-model="userData.password" value="" class="input-style text-center center-block" placeholder="Password" required>
+       <input type="text" name="name" ng-model="userData.password" value="" class="input-style input-style-login center-block" placeholder="Password" required>
       </div>
     </div>
 
     <div class="row">
-      <button class="login-button btn btn-default center-block padding-button" type="submit">Sign in</button>
+      <button class="button-style btn btn-default center-block padding-button" type="submit">Sign in</button>
     </div>
 
+    </form>
+  <!--end FORM----------------->
+  
     <div class="row">
       <div class="text-center">
       <span>Don't have an account?<a href="#/register"> Sign up</a></span>
     </div>
     </div>
 
-  </form>
-</div>
+
+</main>
 
 <!--  <button type="button" class="btn btn-default" ng-click="logout()" name="button">Logout</button> -->
 
- </div>  <!--end wrapper -->
+  </div> <!--end wrapper -->

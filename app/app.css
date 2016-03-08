@@ -4,16 +4,21 @@
 
 @font-face {
   font-family: 'MontserratL';
-  src:  url('app/fonts/Montserrat-UltraLignt.otf');
+  src:  url('fonts/Montserrat-UltraLight.otf');
 }
 
 @font-face {
-  font-family: 'Montserrat-Regular';
-  src:  url('app/fonts/Montserrat-Regular.otf');
+  font-family: 'Montserrat';
+  src:  url('fonts/Montserrat-Regular.otf');
 }
 
 * {
 	margin: 0 auto;
+}
+
+body {
+	font-family: 'Montserrat';
+	background-color: #1d8391;
 }
 
 a,
@@ -25,7 +30,6 @@ a:hover {
 
 ::-webkit-input-placeholder {
   color: white;
-
 }
 ::-moz-placeholder {
   color: white;
@@ -38,23 +42,8 @@ a:hover {
 }
 
 
-body {
-	font-family: 'Montserrat-Regular';
-	background-color: #1d8391;
-}
-
 li {
 	list-style: none;
-}
-
-.input-style {
-  padding-left: 5.8em;
-	padding-right:5.8em;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	background-color: #1cbbb4;
-	border: none;
-
 }
 
 .center-block {
@@ -67,16 +56,6 @@ li {
 	text-align: center;
 }
 
-.padding-button {
-	padding-left: 10em;
-	padding-right:10em;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	border-radius: 0;
-}
-
-/*header*/
-
 img.logo-image,
 img.logo-text {
 	height:3em;
@@ -87,6 +66,75 @@ div.wrapper {
 	margin-top: 10%;
 }
 
+
+.button-style {
+	margin-top: 16px;
+  margin-bottom: 32px;
+	background-color: #f06eaa;
+	border:none;
+  color:white;
+  border-radius: 0;
+  font-family: 'Montserrat';
+  width: 315px;
+  height:45px;
+  }
+
+  input.input-style {
+
+  background-color: #1cbbb4;
+	border: none;
+  font-family: 'MontserratL';
+  width: 315px;
+  height: 45px;
+  padding-left: 20px;
+
+}
+
+/*-----LOGIN PAGE----------*/
+
+.header-login {
+
+margin-bottom: 230px;
+}
+
+
+/*-----REGISTER PAGE---------*/
+
+div.register-main {
+  position: relative;
+  margin-top: 150px;
+}
+
+/*-----CREATE GROUP PAGE------*/
+
+div.createGroup-main {
+  position: relative;
+  margin-top: 230px;
+}
+
+div.create-text {
+  margin-bottom: 20px;
+}
+
+/*-----OVERVIEW PAGE--------*/
+
+div.overview-text {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*-----TASKS PAGE----------*/
+
+div.taskList {
+	text-align: center;
+}
+
+
+
+
+
+
+/*-----menu/nav----------*/
 
 /*.menu-nav
  li.dropdown.open {
@@ -132,24 +180,3 @@ div.wrapper {
 		padding: 0;
 }
 */
-/*-----LOGIN PAGE----------*/
-
-div.login-main {
-	position: relative;
-	margin-top: 50%;
-}
-
-.login-button {
-	margin-top: 1em;
-  margin-bottom: 2em;
-	background-color: #f06eaa;
-	border:none;
-  color:white;
-}
-
-
-/*-----TASKS PAGE----------*/
-
-div.taskList {
-	text-align: center;
-}
