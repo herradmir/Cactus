@@ -3,8 +3,9 @@
 /*------------GENERAL------------------------------------------------------*/
 
 @font-face {
-  font-family: 'MontserratL';
-  src:  url('fonts/Montserrat-UltraLight.otf');
+
+  font-family: 'MontserratH';
+  src:  url('fonts/Montserrat-Hairline.otf');
 }
 
 @font-face {
@@ -83,7 +84,7 @@ div.wrapper {
 
   background-color: #1cbbb4;
 	border: none;
-  font-family: 'MontserratL';
+  font-family: 'MontserratH';
   width: 315px;
   height: 45px;
   padding-left: 20px;

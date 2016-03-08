@@ -16,25 +16,22 @@
 
 
     <div class="row taskList">
-      <h1 class="col-xs-12">Tasks</h1>
-
-
+        <h1 class="col-xs-12">Tasks</h1>
         <ul class="list-inline">
-          <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in taskList">
-            <input type="checkbox"  ng-model="bool" ng-change="sync(bool, task); maybeAdd(bool, task)" ng-checked="task.done">
-            <span>{{task.taskName}}</span>
-          </li>
+            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in data">
+                <input type="checkbox" ng-model="task.done">
+                <span>{{task.taskName}}</span>
+            </li>
         </ul>
 
 
-      </div>
     </div>
+</div>
 
 
-<!--      <pre>
-        {{taskList | json}}
-      </pre>
-      <pre>
+<pre>
+    {{data | json}}
+</pre>
+<!--<pre>
         {{user | json}}
-      </pre>
-    ->
+      </pre>-->

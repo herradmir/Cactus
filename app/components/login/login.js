@@ -11,12 +11,12 @@ angular.module('CactusApp.login', ['ngRoute'])
 
 .controller('LoginController', function($scope, $location, $rootScope, $firebaseAuth, $firebaseObject, Auth) {
 
-  $scope.logout = function() {
+  $scope.logout = function logout() {
     Auth.$unauth();
     console.log('logging out');
   };
 
-  $scope.loginForm = function() {
+  $scope.loginForm = function login() {
       var userName = $scope.userData.name;
       var password = $scope.userData.password;
 
@@ -34,7 +34,7 @@ angular.module('CactusApp.login', ['ngRoute'])
       Auth.$onAuth(function(authData) {
         if (authData) {
           console.log("Authenticated with uid:", authData.uid);
-          $location.path('/overview');
+          $location.path('/tasks');
         } else {
           console.log("Client unauthenticated.")
         }

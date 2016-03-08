@@ -12,9 +12,16 @@ angular.module('CactusApp.Firebasefactories', ['firebase'])
   return (ref);
 }])
 
+.factory('groupList', ['$firebaseArray','$firebaseObject', 'FirebaseUrl', function($firebaseArray, $firebaseObject ,FirebaseUrl) {
+  var ref = new Firebase(FirebaseUrl + '/Groups');
+  return ($firebaseObject(ref));
+}])
+
 .factory('groupRef', ['$firebaseArray', 'FirebaseUrl', function($firebaseArray, FirebaseUrl) {
   var ref = new Firebase(FirebaseUrl + '/Groups');
-  return $firebaseArray(ref);
+  var groupList = new Firebase('https://cactus-app.firebaseio.com/Groups/')
+  //return ($firebaseArray(ref));
+  return ($firebaseArray(groupList))
 }])
 
 .factory('Auth', ['$firebaseAuth', 'FirebaseUrl', function($firebaseAuth, FirebaseUrl) {
