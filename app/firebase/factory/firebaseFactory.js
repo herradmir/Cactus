@@ -21,7 +21,7 @@ angular.module('CactusApp.Firebasefactories', ['firebase'])
   var ref = new Firebase(FirebaseUrl + '/Groups');
   var groupList = new Firebase('https://cactus-app.firebaseio.com/Groups/')
   //return ($firebaseArray(ref));
-  return ($firebaseArray(groupList))
+  return (groupList)
 }])
 
 .factory('Auth', ['$firebaseAuth', 'FirebaseUrl', function($firebaseAuth, FirebaseUrl) {

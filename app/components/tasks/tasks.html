@@ -3,20 +3,22 @@
     <div class="row taskList">
         <h1 class="col-xs-12">Tasks</h1>
         <ul class="list-inline">
-            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in data">
-                <input type="checkbox" ng-model="task.done">
+            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in list">
+                <input type="checkbox" ng-model="task.done" ng-change="sync(task)">
                 <span>{{task.taskName}}</span>
             </li>
         </ul>
-
-
     </div>
 </div>
 
-
+p
 <pre>
-    {{data | json}}
+    {{taskList | json}}
 </pre>
+<!--<pre>
+    {{singleItems | json}}
+</pre>-->
+
 <!--<pre>
         {{user | json}}
       </pre>-->
