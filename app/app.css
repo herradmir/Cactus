@@ -109,8 +109,7 @@ div.wrapper {
 /*-----LOGIN PAGE----------*/
 
 .header-login {
-
-margin-bottom: 230px;
+    
 }
 
 /*
@@ -137,7 +136,7 @@ position: absolute;
 
 div.register-main {
   position: relative;
-  margin-top: 150px;
+  margin-top: 8em;
 }
 
 /*-----CREATE GROUP PAGE------*/
