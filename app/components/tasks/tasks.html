@@ -1,36 +1,27 @@
 <div class="wrapper">
+    <!--HEADER----------------->
+    <header class="header-login">
+        <div class="row">
+            <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
+        </div <div class="row">
+        <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
 
-
-  <!--HEADER----------------->
-  <header class="header-login">
-
-    <div class="row">
-      <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
-    </div
-
-    <div class="row">
-      <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
-    </div>
-
-  </header>
-  <!---------------->
+    </header>
+    <!---------------->
 
 
     <div class="row taskList">
-        <h1 class="text-align">Tasks</h1>
-        <ul>
-            <li ng-controller="Tasks">
-                <input type="checkbox" ng-model="task.done">
-                <!-- <span>{{task.taskName}}</span> --->
-
+        <h1 class="col-xs-12">Tasks</h1>
+        <ul class="list-inline">
+            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in list">
+                <input type="checkbox" ng-model="task.done" ng-change="sync(task)">
+                <span>{{task.taskName}}</span>
             </li>
         </ul>
-
-
     </div>
 </div>
 
-<!--
-<pre>
-    {{data | json}}
+<!--<pre>
+    {{taskList | json}}
 </pre>
+-->
