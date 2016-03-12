@@ -2,24 +2,25 @@
 
 angular.module('CactusApp.createGroup', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/creategroup', {
             templateUrl: 'components/createGroup/createGroup.html',
             controller: 'createGroup'
         });
     }])
 
-    .controller('createGroup', function createGroup($scope, $firebaseAuth, $firebaseObject, $location, groupRef, Auth) {
+    .controller('createGroup', function createGroup($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location, groupRef, Auth) {
         var loggedIn = Auth.$getAuth();
-        $scope.createGroup = function createGroup() {
+        $scope.createAGroup = function() {
+            console.log('create')
             var groupname = $scope.data.groupname;
             var referenceToGroup = new Firebase('https://cactus-app.firebaseio.com/Groups/' + loggedIn.uid)
             var loggedInUser = loggedIn.uid;
-            addGroupToFirebase(groupname, loggedInUser);
-            
-            function addGroupToFirebase(groupname, loggedInUser) {
+            $scope.global = loggedInUser;
 
-                referenceToGroup.$add({
+            function addGroupToFirebase(groupname, loggedInUser) {
+                //location runs before push
+                referenceToGroup.push({
                     groupID: 1234,
                     name: groupname,
                     groupmembers: [
@@ -50,10 +51,12 @@ angular.module('CactusApp.createGroup', ['ngRoute'])
                             "done": false
                         }
                     ]
-                });
-                $location.path('/tasks');
+                })
+                //$location.path('/tasks');
             }
-
+            addGroupToFirebase(groupname, loggedInUser);
+            console.log('create one')
         }
+        console.log(loggedIn.uid);
 
     });
