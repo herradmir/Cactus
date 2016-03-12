@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="wrapper">
+    <div class="wrapper" ng-class="{active: location.path == '/login'}">
 
         <div class="row">
             <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
@@ -17,6 +17,7 @@
 
             <input type="text" name="name" ng-model="userData.password" value="" class="center-block" placeholder="Password" required>
             <button class="btn btn-default btn btn-large center-block" type="submit">Login</button>
+            <button class="btn btn-default btn btn-large center-block" type="button" ng-click="logout()">Logout</button>
             <span>Don't have an account?<a href="#/register"> Sign up</a></span>
     </div>
     </form>
