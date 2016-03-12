@@ -1,66 +1,55 @@
-<<<<<<< HEAD
-
 <div class="wrapper spike-bg">
 
+  <!--HEADER----------------->
+  <header class="header-login">
 
-<!--HEADER----------------->
-<header class="header-login">
+    <div class="row">
+      <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
+    </div>
 
-        <div class="row">
-            <img src="assets/logoImage.png" class="logo-image center-block" alt="Logo picture / Cactus">
+    <div class="row">
+      <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
+    </div>
+
+  </header>
+  <!---------------->
+
+  <main class="main-login">
+    <!--FORM----------------->
+
+    <form method="post" ng-controller="LoginController" ng-submit="loginForm()">
+
+      <div class="row">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputUsername1">Username</label>
+          <input type="text" name="name" ng-model="userData.name" class="input-style input-style-login center-block" value="" placeholder="Username" required>
         </div>
-
-        <div class="row">
-        <img src="assets/VectorLogo.png" class="logo-text center-block" alt="Logotyp / Cactus">
       </div>
 
-
-</header>
-<!---------------->
-
-
-<main class="main-login">
-  <!--FORM----------------->
-
-    <form method="post" ng-controller="LoginController"  ng-submit="loginForm()">
-
-
-    <div class="row">
-      <div class="form-group">
-      <label class="sr-only" for="exampleInputUsername1">Username</label>
-        <input type="text" name="name" ng-model="userData.name" class="input-style input-style-login center-block" value="" placeholder="Username"  required>
+      <div class="row">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputPassword1">Password</label>
+          <input type="text" name="name" ng-model="userData.password" value="" class="input-style input-style-login center-block" placeholder="Password" required>
+        </div>
       </div>
-    </div>
 
-
-    <div class="row">
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword1">Password</label>
-       <input type="text" name="name" ng-model="userData.password" value="" class="input-style input-style-login center-block" placeholder="Password" required>
+      <div class="row">
+        <button class="button-style btn btn-default center-block padding-button" type="submit">Sign in</button>
       </div>
-    </div>
-
-    <div class="row">
-      <button class="button-style btn btn-default center-block padding-button" type="submit">Sign in</button>
-    </div>
 
     </form>
-  <!--end FORM----------------->
+    <!--end FORM----------------->
 
     <div class="row">
       <div class="text-center">
-      <span>Don't have an account?<a href="#/register"> Sign up</a></span>
+        <span>Don't have an account?
+          <a href="#/register">
+            Sign up</a>
+        </span>
+      </div>
     </div>
-    </div>
 
+  </main>
 
-
-</main>
-
-
-
-
-
-
-<!--end wrapper -->
+  <!--end wrapper -->
 </div>
