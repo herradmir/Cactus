@@ -16,11 +16,11 @@
 
 
     <div class="row taskList">
-        <h1 class="col-xs-12">Tasks</h1>
-        <ul class="list-inline">
-            <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in data">
+        <h1 class="text-align">Tasks</h1>
+        <ul>
+            <li ng-controller="Tasks">
                 <input type="checkbox" ng-model="task.done">
-                <span>{{task.taskName}}</span>
+                <!-- <span>{{task.taskName}}</span> --->
             </li>
         </ul>
 
@@ -28,10 +28,12 @@
     </div>
 </div>
 
-
+<!--
 <pre>
     {{data | json}}
 </pre>
-<!--<pre>
-        {{user | json}}
-      </pre>-->
+
+  <pre>
+    {{user | json}}
+  </pre>
+-->
