@@ -14,7 +14,10 @@
         <h1 class="col-xs-12">Tasks</h1>
         <ul class="list-inline">
             <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in list">
-                <input type="checkbox" ng-model="task.done" ng-change="sync(task)">
+
+                <input type="checkbox" ng-model="task.done" ng-change="sync(task)" name="thing"
+                value="valuable" class="thing"/><label for="thing"></label>
+
                 <span>{{task.taskName}}</span>
             </li>
         </ul>
