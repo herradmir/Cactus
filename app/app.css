@@ -23,11 +23,11 @@ body {
     background: #1d8391;
 }
 
-body.bg-spikes {
+/*body.bg-spikes {
     background-image: url('assets/Taggar.svg');
     background-size: 300px;
     background-repeat: repeat;
-}
+}*/
 
 a, a:active, a:hover {
     text-decoration: none;
@@ -68,8 +68,16 @@ img.logo-image, img.logo-text {
     height: 3em;
 }
 
-div.wrapper {
-    margin-top: 10%;
+div.spike-bg {
+    position: absolute;
+    left:0;
+    right:0;
+    padding-top:10%;
+    height: 100%;
+    margin: 0;
+    background-image: url('assets/Taggar.svg');
+    background-size: 300px;
+    background-repeat: repeat;
 }
 
 .button-style {
