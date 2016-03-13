@@ -102,7 +102,7 @@ div.wrapper {
   width: 315px;
   height: 45px;
   padding-left: 20px;
-  color:black;
+  color:white;
 
 }
 
@@ -165,20 +165,22 @@ div.taskList {
 
 input[type=checkbox] {
   display: none;
+
 }
 
 input[type=checkbox] + label {
   background: url('assets/task-icons/cactus-icon.png') no-repeat;
   background-size: 50%;
   height:200px;
+  width: 200px;
   display: inline-block;
 }
 
-input[type=checkbox]:checked + label
-{
+input[type=checkbox]:checked + label {
 background: url('assets/task-icons/cactus-icon.png') no-repeat;
+opacity: 0.5;
 background-size: 50%;
-height: 200px;
+height: 200px;;
+width:200px;
 display:inline-block;
-
 }
