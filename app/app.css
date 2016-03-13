@@ -1,33 +1,26 @@
-/* app css stylesheet */
-
+    /* app css stylesheet */
 /*------------GENERAL------------------------------------------------------*/
 
 @font-face {
-
-  font-family: 'MontserratH';
-  src:  url('fonts/Montserrat-Hairline.otf');
+    font-family: 'MontserratH';
+    src: url('fonts/Montserrat-Hairline.otf');
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src:  url('fonts/Montserrat-Regular.otf');
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.otf');
 }
 
-
 * {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 body {
-	font-family: 'Montserrat';
-
-
+    font-family: 'Montserrat';
 }
 
 .bg-color {
-
-  background: #1d8391;
-
+    background: #1d8391;
 }
 
 body.bg-spikes {
@@ -36,171 +29,131 @@ body.bg-spikes {
     background-repeat: repeat;
 }
 
-a,
-a:active,
-a:hover {
-	text-decoration: none;
-	color: white;
+a, a:active, a:hover {
+    text-decoration: none;
+    color: white;
 }
 
 ::-webkit-input-placeholder {
-  color: white;
-}
-::-moz-placeholder {
-  color: white;
-}
-:-ms-input-placeholder {
-  color: white;
-}
-:-moz-placeholder {
-  color: white;
+    color: white;
 }
 
+::-moz-placeholder {
+    color: white;
+}
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+:-moz-placeholder {
+    color: white;
+}
 
 li {
-	list-style: none;
+    list-style: none;
 }
 
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-center {
-	text-align: center;
+    text-align: center;
 }
 
-img.logo-image,
-img.logo-text {
-	height:3em;
-
+img.logo-image, img.logo-text {
+    height: 3em;
 }
 
 div.wrapper {
-	margin-top: 10%;
+    margin-top: 10%;
 }
 
-
 .button-style {
-	margin-top: 16px;
-  margin-bottom: 32px;
-	background-color: #f06eaa;
-	border:none;
-  color:white;
-  border-radius: 0;
-  font-family: 'Montserrat';
-  width: 315px;
-  height:55px;
-  }
-
-  .button-style-half {
-  	margin-top: 16px;
+    margin-top: 16px;
     margin-bottom: 32px;
-  	background-color: #f06eaa;
-  	border:none;
-    color:white;
+    background-color: #f06eaa;
+    border: none;
+    color: white;
+    border-radius: 0;
+    font-family: 'Montserrat';
+    width: 315px;
+    height: 55px;
+}
+
+.button-style-half {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    background-color: #f06eaa;
+    border: none;
+    color: white;
     border-radius: 0;
     font-family: 'Montserrat';
     width: 150px;
-    height:55px;
-    }
+    height: 55px;
+}
 
 .button-double {
-  margin-left: 30px;
+    margin-left: 30px;
 }
 
-.button1 {
+.button1 {}
 
+input.input-style {
+    background-color: #1cbbb4;
+    border: none;
+    font-family: 'MontserratH';
+    width: 315px;
+    height: 45px;
+    padding-left: 20px;
+    color: white;
 }
-
-  input.input-style {
-
-  background-color: #1cbbb4;
-	border: none;
-  font-family: 'MontserratH';
-  width: 315px;
-  height: 45px;
-  padding-left: 20px;
-  color:white;
-
-}
-
 /*-----LOGIN PAGE----------*/
 
 .header-login {
-margin-bottom: 10em;
+    margin-bottom: 10em;
 }
-
-/*
-div.spike-bg {
-  background-image: url('assets/Taggar.svg');
-  background-size: 250px;
-  background-repeat: repeat;
-}
-*/
-/*
-img.spike-bg {
-position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height:auto;
-  z-index: -2;
-  transform: translate(-50%, -50%);
-}
-*/
 /*-----REGISTER PAGE---------*/
 
-div.register-main {
-  position: relative;
-  margin-top: 8em;
+.register-main, .createGroup-main {
+    position: relative;
+    margin-top: 8em;
 }
-
 /*-----CREATE GROUP PAGE------*/
 
-div.createGroup-main {
-  position: relative;
-  margin-top: 230px;
-}
-
 div.create-text {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
 /*-----OVERVIEW PAGE--------*/
 
 div.overview-text {
-  margin-top: 20px;
-  margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-
 /*-----TASKS PAGE----------*/
 
 div.taskList {
-	text-align: center;
+    text-align: center;
 }
 
 input[type=checkbox] {
-  display: none;
-
-}
-
-input[type=checkbox] + label {
-  background: url('assets/task-icons/cactus-icon.png') no-repeat;
-  background-size: 50%;
-  height:200px;
-  width: 200px;
-  display: inline-block;
-}
-
-input[type=checkbox]:checked + label {
-background: url('assets/task-icons/cactus-icon.png') no-repeat;
-opacity: 0.5;
-background-size: 50%;
-height: 200px;;
-width:200px;
-display:inline-block;
-}
+    display: none;
+    input[type=checkbox] + label {
+        background: url('assets/task-icons/cactus-icon.png') no-repeat;
+        background-size: 50%;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+    }
+    input[type=checkbox]:checked + label {
+        background: url('assets/task-icons/cactus-icon.png') no-repeat;
+        opacity: 0.5;
+        background-size: 50%;
+        height: 200px;
+        ;
+        width: 200px;
+        display: inline-block;
+    }
