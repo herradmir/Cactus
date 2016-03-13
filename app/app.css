@@ -94,6 +94,26 @@ div.wrapper {
   height:55px;
   }
 
+  .button-style-half {
+  	margin-top: 16px;
+    margin-bottom: 32px;
+  	background-color: #f06eaa;
+  	border:none;
+    color:white;
+    border-radius: 0;
+    font-family: 'Montserrat';
+    width: 150px;
+    height:55px;
+    }
+
+.button-double {
+  margin-left: 30px;
+}
+
+.button1 {
+
+}
+
   input.input-style {
 
   background-color: #1cbbb4;
