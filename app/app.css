@@ -1,154 +1,155 @@
     /* app css stylesheet */
-/*------------GENERAL------------------------------------------------------*/
-
-@font-face {
-    font-family: 'MontserratH';
-    src: url('fonts/Montserrat-Hairline.otf');
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('fonts/Montserrat-Regular.otf');
-}
-
-* {
-    margin: 0 auto;
-}
-
-body {
-    font-family: 'Montserrat';
-}
-
-.bg-color {
-    background: #1d8391;
-}
-
-/*body.bg-spikes {
+    /*------------GENERAL------------------------------------------------------*/
+    
+    @font-face {
+        font-family: 'MontserratH';
+        src: url('fonts/Montserrat-Hairline.otf');
+    }
+    
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('fonts/Montserrat-Regular.otf');
+    }
+    
+    * {
+        margin: 0 auto;
+    }
+    
+    body {
+        font-family: 'Montserrat';
+    }
+    
+    .bg-color {
+        background: #1d8391;
+    }
+    /*body.bg-spikes {
     background-image: url('assets/Taggar.svg');
     background-size: 300px;
     background-repeat: repeat;
 }*/
-
-a, a:active, a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-::-webkit-input-placeholder {
-    color: white;
-}
-
-::-moz-placeholder {
-    color: white;
-}
-
-:-ms-input-placeholder {
-    color: white;
-}
-
-:-moz-placeholder {
-    color: white;
-}
-
-li {
-    list-style: none;
-}
-
-.center-block {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.text-center {
-    text-align: center;
-}
-
-img.logo-image, img.logo-text {
-    height: 3em;
-}
-
-div.spike-bg {
-    position: absolute;
-    left:0;
-    right:0;
-    padding-top:10%;
-    height: 100%;
-    margin: 0;
-    background-image: url('assets/Taggar.svg');
-    background-size: 300px;
-    background-repeat: repeat;
-}
-
-.button-style {
-    margin-top: 16px;
-    margin-bottom: 32px;
-    background-color: #f06eaa;
-    border: none;
-    color: white;
-    border-radius: 0;
-    font-family: 'Montserrat';
-    width: 315px;
-    height: 55px;
-}
-
-.button-style-half {
-    margin-top: 16px;
-    margin-bottom: 32px;
-    background-color: #f06eaa;
-    border: none;
-    color: white;
-    border-radius: 0;
-    font-family: 'Montserrat';
-    width: 150px;
-    height: 55px;
-}
-
-.button-double {
-    margin-left: 30px;
-}
-
-.button1 {}
-
-input.input-style {
-    background-color: #1cbbb4;
-    border: none;
-    font-family: 'MontserratH';
-    width: 315px;
-    height: 45px;
-    padding-left: 20px;
-    color: white;
-}
-/*-----LOGIN PAGE----------*/
-
-.header-login {
-    margin-bottom: 10em;
-}
-/*-----REGISTER PAGE---------*/
-
-.register-main, .createGroup-main {
-    position: relative;
-    margin-top: 8em;
-}
-/*-----CREATE GROUP PAGE------*/
-
-div.create-text {
-    margin-bottom: 20px;
-}
-/*-----OVERVIEW PAGE--------*/
-
-div.overview-text {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-/*-----TASKS PAGE----------*/
-
-div.taskList {
-    text-align: center;
-}
-
-input[type=checkbox] {
-    display: none;
+    
+    a, a:active, a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    
+    ::-webkit-input-placeholder {
+        color: white;
+    }
+    
+    ::-moz-placeholder {
+        color: white;
+    }
+    
+    :-ms-input-placeholder {
+        color: white;
+    }
+    
+    :-moz-placeholder {
+        color: white;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .center-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    img.logo-image, img.logo-text {
+        height: 3em;
+    }
+    
+    div.spike-bg {
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding-top: 10% ;
+        height: 100%;
+        margin: 0;
+        background-image: url('assets/Taggar.svg');
+        background-size: 300px;
+        background-repeat: repeat;
+    }
+    
+    .button-style {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        background-color: #f06eaa;
+        border: none;
+        color: white;
+        border-radius: 0;
+        font-family: 'Montserrat';
+        width: 315px;
+        height: 55px;
+    }
+    
+    .button-style-half {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        background-color: #f06eaa;
+        border: none;
+        color: white;
+        border-radius: 0;
+        font-family: 'Montserrat';
+        width: 150px;
+        height: 55px;
+    }
+    
+    .button-double {
+        margin-left: 30px;
+    }
+    
+    .button1 {}
+    
+    input.input-style {
+        background-color: #1cbbb4;
+        border: none;
+        font-family: 'MontserratH';
+        width: 315px;
+        height: 45px;
+        padding-left: 20px;
+        color: white;
+    }
+    /*-----LOGIN PAGE----------*/
+    
+    .header-login {
+        margin-bottom: 10em;
+    }
+    /*-----REGISTER PAGE---------*/
+    
+    .register-main, .createGroup-main {
+        position: relative;
+        margin-top: 8em;
+    }
+    /*-----CREATE GROUP PAGE------*/
+    
+    div.create-text {
+        margin-bottom: 20px;
+    }
+    /*-----OVERVIEW PAGE--------*/
+    
+    div.overview-text {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    /*-----TASKS PAGE----------*/
+    
+    div.taskList {
+        text-align: center;
+    }
+    
+    input[type=checkbox] {
+        display: none;
+    }
+    
     input[type=checkbox] + label {
         background: url('assets/task-icons/cactus-icon.png') no-repeat;
         background-size: 50%;
@@ -156,6 +157,7 @@ input[type=checkbox] {
         width: 200px;
         display: inline-block;
     }
+    
     input[type=checkbox]:checked + label {
         background: url('assets/task-icons/cactus-icon.png') no-repeat;
         opacity: 0.5;
