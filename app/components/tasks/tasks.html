@@ -12,25 +12,16 @@
     <div class="row taskList">
         <h1 class="col-xs-12">Tasks</h1>
         <ul class="list-inline">
-
-          <li class="col-xs-4 col-xs-offset-2"><input type="checkbox" name="thing"
-          value="valuable" id="thing"/><label for="thing"></label></li>
-
-            <li class="col-xs-4 col-xs-offset-2"><input type="checkbox" name="thing"
-          value="valuable" id="thing2"/><label for="thing2"></label></li>
-
-            <!-- <li class="col-xs-6 list-padding" ng-controller="Tasks" ng-repeat="task in list">
-
-                <input type="checkbox" ng-model="task.done" ng-change="sync(task)" name="thing"
-                value="valuable" id="thing"/><label for="thing"></label>
-
+            <li class="col-xs-4 col-xs-offset-2" ng-controller="Tasks" ng-repeat="task in list">
+                <input type="checkbox" ng-model="task.done" ng-change="sync(task)" name="{{task.taskName}}" value="valuable" id="{{task.taskName}}" />
+                <label for="{{task.taskName}}"></label>
                 <span>{{task.taskName}}</span>
-            </li> -->
+            </li>
         </ul>
     </div>
 </div>
-
-<!--<pre>
-    {{taskList | json}}
+<!--
+<pre>
+    {{list | json}}
 </pre>
 -->

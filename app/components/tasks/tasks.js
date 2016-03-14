@@ -11,17 +11,22 @@ angular.module('CactusApp.tasks', ['ngRoute'])
 
     .controller('Tasks', function Tasks($scope, Auth, groupRef, $firebaseArray) {
         var loggedIn = Auth.$getAuth();
-        //var loggedIn = '95b17b11-e3f7-43ff-87c0-d278f458e64c';
         var url = groupRef + '/' + loggedIn.uid;
-        //console.log(loggedIn.uid);
-        var referenceToGroup = new Firebase(url)
-        var list = $firebaseArray(referenceToGroup);
-        list.$loaded()
+
+        var referenceToGroup = new Firebase(url);
+        var arrayRef = $firebaseArray(referenceToGroup);
+
+        arrayRef.$loaded()
             .then(function(x) {
-                $scope.list = x;
+                var taskList = new Firebase(groupRef + '/' + loggedIn.uid + '/' + arrayRef["0"].$id + '/taskList/')
+                var arraylist = $firebaseArray(taskList);
+                $scope.list = arraylist;
             })
             .catch(function(error) {
                 console.log("Error:", error);
             });
-        console.log(list);
+
+        var task = function() {
+
+        }
     });
