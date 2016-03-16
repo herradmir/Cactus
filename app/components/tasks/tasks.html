@@ -13,15 +13,14 @@
         <h1 class="col-xs-12">Tasks</h1>
         <ul class="list-inline">
             <li class="col-xs-4 col-xs-offset-2" ng-controller="Tasks" ng-repeat="task in list">
-                <input type="checkbox" ng-model="task.done" ng-change="sync(task)" name="{{task.taskName}}" value="valuable" id="{{task.taskName}}" />
+                <input type="checkbox" ng-model="task.done" name="{{task.taskName}}" value="valuable" id="{{task.taskName}}" />
                 <label for="{{task.taskName}}"></label>
-                <span>{{task.taskName}}</span>
+                <!--<span>{{task.taskName}}</span>-->
             </li>
         </ul>
     </div>
 </div>
-<!--
-<pre>
+
+<!--<pre>
     {{list | json}}
-</pre>
--->
+</pre>-->
