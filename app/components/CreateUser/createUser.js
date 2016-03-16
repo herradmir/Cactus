@@ -2,22 +2,26 @@
 
 angular.module('CactusApp.createUser', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/register', {
             templateUrl: 'components/CreateUser/createUser.html',
             controller: 'createUser'
         });
     }])
 
-    .controller('createUser', function ($scope, $location, $rootScope, $firebaseAuth, $firebaseObject, userRef, ref) {
+    .controller('createUser', function($scope, $location, $rootScope, $firebaseAuth, $firebaseObject, $firebaseArray, userRef, ref) {
 
         $scope.createUser = function createUser() {
             var user = $scope.data;
+            var userReference = new Firebase(userRef + '/' + user.username);
+            var createUserNow = $firebaseArray(userReference);
+
+            console.log(userReference.toString());
             if (user.password === user.reTypePassword) {
-                userRef.createUser({
+                userReference.createUser({
                     email: user.email,
                     password: user.password
-                }, function (error, userData) {
+                }, function(error, userData) {
                     if (error) {
                         console.log("Error creating user:", error);
                     } else {
@@ -29,7 +33,7 @@ angular.module('CactusApp.createUser', ['ngRoute'])
                     ref.authWithPassword({
                         email: user.email,
                         password: user.password
-                    }, function (error, authData) {
+                    }, function(error, authData) {
                         if (error) {
                             console.log("Login Failed!", error);
                         } else {
@@ -37,29 +41,21 @@ angular.module('CactusApp.createUser', ['ngRoute'])
                             addUserToRecord();
                         }
                     });
-                    console.log('auth')
                 }
 
                 function addUserToRecord() {
-                    console.log('add')
-                    userRef.push({
+                    createUserNow.$add({
                         email: user.email,
                         username: user.username,
                         tasks: [''],
                         group: ['']
                     });
-                    console.log('push')
-                    console.log('move')
+                    move();
                 }
                 function move() {
-
                     $location.path('/creategroup');
-                    console.log($location)
                 }
-
-                move();
             }
-
             else {
                 //trow error on password match
                 console.log('passwords dont match');
