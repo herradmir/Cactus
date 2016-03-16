@@ -1,4 +1,3 @@
-'use strict';
 
 angular.module('CactusApp.createUser', ['ngRoute'])
 
