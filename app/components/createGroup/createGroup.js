@@ -11,16 +11,17 @@ angular.module('CactusApp.createGroup', ['ngRoute'])
 
     .controller('createGroup', function createGroup($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location, groupRef, Auth) {
         var loggedIn = Auth.$getAuth();
-        $scope.createAGroup = function() {
-            console.log('create')
+        $scope.createGroupForm = function() {
             var groupname = $scope.data.groupname;
-            var referenceToGroup = new Firebase('https://cactus-app.firebaseio.com/Groups/' + loggedIn.uid)
+            var referenceToGroup = new Firebase('https://cactus-app.firebaseio.com/Groups/' + loggedIn.uid);
+            var listRef = $firebaseArray(referenceToGroup);
             var loggedInUser = loggedIn.uid;
             $scope.global = loggedInUser;
+            addGroupToFirebase(groupname, loggedInUser);
 
             function addGroupToFirebase(groupname, loggedInUser) {
                 //location runs before push
-                referenceToGroup.push({
+                listRef.$add({
                     groupID: 1234,
                     name: groupname,
                     groupmembers: [
@@ -52,11 +53,10 @@ angular.module('CactusApp.createGroup', ['ngRoute'])
                         }
                     ]
                 })
-                //$location.path('/tasks');
+                $location.path('/tasks');
             }
-            addGroupToFirebase(groupname, loggedInUser);
-            console.log('create one')
         }
-        console.log(loggedIn.uid);
-
+        $scope.joinGroup = function joinGroup() {
+            var groupname = $scope.data.groupname;
+        }
     });
