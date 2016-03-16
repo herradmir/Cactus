@@ -11,12 +11,15 @@ angular.module('CactusApp.login', ['ngRoute'])
 
     .controller('LoginController', function($scope, $location, $rootScope, $firebaseAuth, $firebaseObject, Auth) {
         $scope.location = $location
-        console.log($location.path());
+        Auth.$unauth();
+
+        // logout 
         $scope.logout = function logout() {
             Auth.$unauth();
             console.log('logging out');
         };
-
+        
+        // login 
         $scope.loginForm = function login() {
             var userName = $scope.userData.name;
             var password = $scope.userData.password;

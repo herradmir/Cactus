@@ -9,7 +9,9 @@ angular.module('CactusApp', [
   'CactusApp.overview',
   'CactusApp.createGroup',
   'CactusApp.createUser',
-  'CactusApp.tasks'
+  'CactusApp.tasks',
+  'CactusApp.menu'
+
 ])
 .constant('FirebaseUrl', 'https://cactus-app.firebaseio.com/')
 .config(['$routeProvider', function($routeProvider) {

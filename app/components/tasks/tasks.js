@@ -31,7 +31,6 @@ angular.module('CactusApp.tasks', ['ngRoute', 'firebase'])
                     var taskListRef = new Firebase(groupRef + '/' + loggedIn.uid + '/' + arrayRef["0"].$id + '/taskList/')
                     var arraylist = $firebaseArray(taskListRef);
                     var objectList = $firebaseObject(taskListRef);
-                    //$scope.list = objectList;
 
                     objectList.$bindTo($scope, "list").then(function() {
                         console.log('saved' );

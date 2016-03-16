@@ -5,10 +5,10 @@ angular.module('CactusApp.menu', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/menu', {
 		templateUrl: 'components/menu/menu.html',
-		controller: 'Menu'
+		controller: 'MenuController'
 	});
 }])
 
-.controller('Menu', function($scope, $location, $rootScope) {
+.controller('MenuController', function($scope, $location, $rootScope) {
 
 });
